@@ -1,6 +1,6 @@
-CC = gcc -c -o
+CC = gcc 
 AR = ar rcs
-CFLAGS = -Wall -Wextra -Werror -g
+CFLAGS = -Wall -Wextra -Werror
 NAME = libft.a
 SRCS = ft_strlen.c \
       ft_atoi.c \
@@ -35,7 +35,8 @@ SRCS = ft_strlen.c \
        ft_strlcat.c \
        ft_strnstr.c \
        ft_strlcpy.c \
-       ft_strtrim.c
+	   ft_strtrim.c \
+	   ft_split.c
 
 SRCS_BONUS = ft_lstnew.c \
 	     ft_lstadd_front.c \
@@ -44,7 +45,8 @@ SRCS_BONUS = ft_lstnew.c \
 	     ft_lstadd_back.c \
 	     ft_lstdelone.c \
 	     ft_lstclear.c \
-	     ft_lstiter.c
+	     ft_lstiter.c \
+		 ft_lstmap.c
      
 OBJS = ${SRCS:.c=.o}
 OBJS_BONUS = ${SRCS_BONUS:.c=.o}
@@ -54,8 +56,11 @@ all:	${NAME}
 ${NAME}: ${OBJS}
 		${AR} ${NAME} ${OBJS}
 
-bonus:	${OBJS_BONUS}
+bonus:  ${OBJS_BONUS}
 		${AR} ${NAME} ${OBJS_BONUS}
+
+%.o: %.c
+	$(CC) $(CFLAGS) -c -o $@ $<
 
 clean:
 	rm -f ${OBJS} ${OBJS_BONUS}

@@ -45,14 +45,14 @@ void	filler(char *str, int i, long n)
 	}
 }
 
-char	*ft_itoa(int nb)
+char	*ft_itoa(int n)
 {
-	long	n;
+	long	nb;
 	int		i;
 	char	*str;
 
-	n = nb;
-	i = base_len(n);
+	nb = n;
+	i = base_len(nb);
 	str = (char *)malloc(sizeof(char) * (i + 1));
 	if (!str)
 		return (NULL);
@@ -63,6 +63,6 @@ char	*ft_itoa(int nb)
 		str[0] = 48;
 		return (str);
 	}
-	filler(str, i, n);
+	filler(str, i, nb);
 	return (str);
 }

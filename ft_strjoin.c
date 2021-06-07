@@ -6,13 +6,13 @@
 /*   By: engo <engo@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/27 14:00:51 by engo              #+#    #+#             */
-/*   Updated: 2021/05/27 16:19:18 by engo             ###   ########.fr       */
+/*   Updated: 2021/06/06 14:32:43 by engo             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strcat(char const *s1, char const *s2, char *dest)
+static char	*ft_strcat(char const *s1, char const *s2, char *dest)
 {
 	int	i;
 	int	j;

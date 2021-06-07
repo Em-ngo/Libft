@@ -6,22 +6,22 @@
 /*   By: engo <engo@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/26 11:24:13 by engo              #+#    #+#             */
-/*   Updated: 2021/05/27 14:24:42 by engo             ###   ########.fr       */
+/*   Updated: 2021/06/06 12:03:45 by engo             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void ft_bzero(void *s, size_t n)
+void	ft_bzero(void *s, size_t n)
 {
-  size_t i;
-  char *tmp;
+	size_t	i;
+	char	*tmp;
 
-  tmp = s;
-  i = 0;
-  while(i < n)
-  {
-    tmp[i] = '\0';
-    i++;
-  }
+	tmp = s;
+	i = 0;
+	while (i < n)
+	{
+		tmp[i] = '\0';
+		i++;
+	}
 }
